@@ -1,0 +1,28 @@
+name: 'mustache_incremental_dom'
+version: 0.0.1
+description: An experiment to combine mustache with Incremental DOM in Dart
+#author: kulshekhar <email@example.com>
+
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+
+dependencies:
+  incremental_dom_facade: ^0.0.3
+
+dev_dependencies:
+  html: ^0.13.0
+  dart_style: ^0.2.0
+  observable: ^0.20.0
+  mustache: ^0.2.5
+  mustache4dart: '>= 1.0.0 < 2.0.0'
+  browser: '>=0.10.0 <0.11.0'
+  dart_to_js_script_rewriter: '^1.0.1'
+  source_gen: ^0.5.0
+  build_runner: ^0.1.0
+
+transformers:
+- $dart2js:
+    commandLineOptions:
+    - --fast-startup
+    - --trust-primitives
+    - --trust-type-annotations
